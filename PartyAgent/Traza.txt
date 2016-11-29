@@ -1,0 +1,68 @@
+[setup] Host esta aqui
+[setup] Agente camarero : esperando la llamada de trabajo
+[WakerBehaviour] guest2: He llegado a la fiesta
+[Control de usuario] El hambre de guest2 es: 2
+[WakerBehaviour] guest2: esperando a que de comienzo la fiesta...
+[OneShootBehaviour]guest2 : Hola a tod@s
+[WelcomeBehaviour] Hosthost : Hola guest2
+[WakerBehaviour] guest1: He llegado a la fiesta
+[Control de usuario] El hambre de guest1 es: 4
+[WakerBehaviour] guest1: esperando a que de comienzo la fiesta...
+[llenaBehaviour] Host: Que comience la fiesta
+[llenaBehaviour] Host: Camareros!!!
+[setup]Agente camarero : es hora de trabajar
+[setup] Agente camarero : a sus ordenes
+[OneShootBehaviour]guest1 : Hola a tod@s
+[WelcomeBehaviour] guest1 : Hola guest2
+[WelcomeBehaviour] Hosthost : Hola guest1
+[WelcomeBehaviour] guest2 : Hola guest1
+[Tickerbehaviour] camarero : guest1 Le apetece beber algo?
+[OneShotBehaviour]guest1: Me beberia 4 cervezas
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[Tickerbehaviour] camarero : guest1 Le apetece beber algo?
+[OneShotBehaviour]guest1: Me beberia 3 cervezas
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[Tickerbehaviour] camarero : guest1 Le apetece comer algo?
+[OneShotBehaviour]guest1: Me comeria 4 canapes
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[Tickerbehaviour] camarero : guest1 Le apetece comer algo?
+[OneShotBehaviour]guest1: Me comeria 3 canapes
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[Tickerbehaviour] camarero : guest1 Le apetece comer algo?
+[OneShotBehaviour]guest1: Me comeria 2 canapes
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[Tickerbehaviour] camarero : guest1 Le apetece beber algo?
+[OneShotBehaviour]guest1: Me beberia 2 cervezas
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[Tickerbehaviour] camarero : guest1 Le apetece comer algo?
+[OneShotBehaviour]guest1: Me comeria 1 canapes
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[Tickerbehaviour] camarero : guest1 Le apetece comer algo?
+[OneShotBehaviour]guest1: No, gracias
+[Tickerbehaviour] camarero : No hay de que guest1
+[Tickerbehaviour] camarero : guest2 Le apetece beber algo?
+[OneShotBehaviour]guest2: Me beberia 3 cervezas
+[Tickerbehaviour] camarero : Aqui tienes guest2
+[Tickerbehaviour] camarero : guest2 Le apetece comer algo?
+[OneShotBehaviour]guest2: Me comeria 2 canapes
+[Tickerbehaviour] camarero : Aqui tienes guest2
+[Tickerbehaviour] camarero : guest2 Le apetece beber algo?
+[OneShotBehaviour]guest2: Me beberia 2 cervezas
+[Tickerbehaviour] camarero : Aqui tienes guest2
+[Tickerbehaviour] camarero : guest2 Le apetece beber algo?
+[OneShotBehaviour]guest2: Me beberia 1 cervezas
+[Tickerbehaviour] camarero : Aqui tienes guest2
+[Tickerbehaviour] camarero : guest2 Le apetece comer algo?
+[OneShotBehaviour]guest2: Me comeria 1 canapes
+[Tickerbehaviour] camarero : Aqui tienes guest2
+[onEnd] guest2: adios Host
+[DespedidaBehaviour] Hosthost : Adios guest2
+[takeDown] guest2 se marcho de la fiesta
+[Tickerbehaviour] camarero : guest1 Le apetece beber algo?
+[OneShotBehaviour]guest1: Me beberia 1 cervezas
+[Tickerbehaviour] camarero : Aqui tienes guest1
+[onEnd] guest1: adios Host
+[DespedidaBehaviour] Hosthost : Adios guest1
+[takeDown] guest1 se marcho de la fiesta
+[Tickerbehaviour] camarero: Se acabo la fiesta, hora de dormir
+[takeDown] camarero se marcha de la fiesta

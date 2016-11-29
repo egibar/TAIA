@@ -1,0 +1,44 @@
+-------------------------
+	 PartyAgent
+   	    por 
+	Asier Egibar
+ 	     & 
+   Gonzalo Montero
+-------------------------
+
+Para ejecutar: java jade.Boot -gui  "Hosthost:fiesta.PartyAgent; guest1:fiesta.PartyAgent; guest2:fiesta.PartyAgent; guest3:fiesta.PartyAgent; guest4:fiesta.PartyAgent; camarero:fiesta.Camarero;"
+
+2 tipos de Agente: PartyAgent y Camarero
+
+2 instancias de PartyAgent: Host y Guest
+
+PartyAgent:
+
+	-Host:
+		*Llena behaviour: SimpleBehaviour, el anfitrión comprueba si todos los invitados han llegado a la fiesta.
+		*BienvenidaBehaviour: SimpleBehaviour, Los asistentes que han llegado a la fiesta devuelven el saludo a los nuevos asistentes que llegan más tarde  
+		*DespededaBehaviour: SimpleBehaviour, el anfitrion se despide de los invitados que se van de las fiestas.
+
+		+El host ya esta en la fiesta, espera a que lleguen todos los invitados y devolviendo el saludo a todos aquellos que llegan, y cuando estos están, 
+		+llama a los camareros y da comienzo a la fiesta.
+		+Durante la fiesta, el host espera a que se despidan de el sus invitados y les devuelve el saludo. 
+
+	-Guest:
+		*WakerBehaviour: Se encarga de despertar a los invitados. ( Entra cuando su tiempo de espera acaba)
+		*AccionBehaviour: OneShotBehaviour, deja al invitado bloqueado, hasta que el host le manda el mensaje de que disfruten de la fiesta. Despues llama al comportamiento alimentarse.
+		*SaludarBehaviour: SimpleBehaviour, Cada guest que llega a la fiesta saluda a todos los que ya han llegado antes que el.
+		*BienvenidaBehaviour: SimpleBehaviour, Los asistentes que han llegado a la fiesta devuelven el saludo a los nuevos asistentes que llegan más tarde 
+		*AlimentarseBehaviour: SimpleBehaviour, Llama a los comportamientos comer o beber, dependiendo de lo que el camarero nos ofrezca.
+		*Comer: OneShotBehaviour, El agente come y va saciando su hambre
+		*Beber: OneShotBehaviour, EL agente bebe y va saciando su sed
+		*DespedidaBehaviour: SimpleBehaviour, El host se despide de cualquier invitado que se vaya de la fiesta.
+
+		+ Los invitados van llegando a la fiesta de forma random, saludan a todos los que estan en la fiesta, y saludan a quienes llegan mas tarde. Cuando da comienzo la fiesta, estos comen 
+		+ y beben hasta saciarse. Cuando esto ocurre, los invitados se despiden del Host y se marchan de la fiesta.
+Camarero:
+
+	*TickerBehaviour: El camarero va ofreciendo comida y bebida a los asistentes a la fiesta.
+		
+	+Cuando da comienzo la fiesta, los camareros se pasean ofreciendo comida y bebida hasta que todos los invitados se marchan. Cuando esto pasa, los camareros dejan de trabajar y se van a casa.
+	
+
